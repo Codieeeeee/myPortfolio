@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddhu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="portfolioStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm" id="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#home">
+            <img src="./logo.png" alt="Logo" width="40" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home" style="color: hsl(275,100%,40%);">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about" style="color: hsl(275,100%,40%);">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#skills" style="color: hsl(275,100%,40%);">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#projects" style="color: hsl(275,100%,40%);">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"href="#contact" style="color: hsl(275,100%,40%);">Contact</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+    <div id="home">
+        <div id="home-left">
+            <h2 id="home-left-heading" class="h2">Hello, I'm <span data-text="Siddhartha...!" class="hidden">Siddhartha...!</span></h2><br>
+            <p class="description1 hidden"> Full Stack Web Developer</p>
+        </div>
+        <div id="home-right">
+            <div id="home-right-photo"></div>
+            <div id="home-right-socialMedia">
+                <a href="https://www.linkedin.com/in/siddhartha-bojanki-46905b218">
+                    <img src="./linkedin.png" alt="linkedin" width="25px" height="25px"/>
+                </a>
+                <a href="https://wa.me/9963233038">
+                    <img src="./whatsapp.png" alt="whatsapp" width="25px" height="25px"/>
+                </a>
+                <a href="https://www.instagram.com/siddhu__siddhartha__">
+                    <img src="./instagram.png" alt="instagram" width="25px" height="25px"/>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <h3 class="h3">About me</h3>
+        <div id="about-container">
+            <div class="about-container-left">
+                <p class="description hidden">I'm a passionate full-stack web developer with expertise in building dynamic and responsive websites and applications. With a solid foundation in both front-end and back-end technologies, I thrive on transforming ideas into functional, user-friendly digital experiences. Whether it's crafting sleek interfaces or developing robust server-side logic, I am committed to delivering high-quality solutions that meet both client and user needs.</p>
+            </div>
+            <div class="about-container-right hidden">
+                <table class="about-container-right-table">
+                    <tr>
+                        <th>>Name:</th>
+                        <td>Siddhartha Bojanki</td>
+                    </tr>
+                    <tr>
+                        <th>>B'day:</th>
+                        <td>25-03-2005</td>
+                    </tr>
+                    <tr>
+                        <th>>Age:</th>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <th>>Email:</th>
+                        <td>siddharthabojanki@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th>>Phone:</th>
+                        <td>9963233038</td>
+                    </tr>
+                </table>
+            </div>
+        </div>  
+    </div>
+    <div id="skills">
+        <h3 class="h3">Skills</h3>
+        <div class="skills-progress">
+            <table border="none">
+                <tr>
+                    <td class="hidden">
+                        <h5>HTML</h5>
+                        <h5 class="progress-percentage" style="margin-left: 80%;">100%</h5>
+                        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%"></div>
+                        </div>
+                    </td>
+                    <td class="hidden">
+                        <h5>PHP</h5>
+                        <h5 class="progress-percentage" style="margin-left: 84%;">75%</h5>
+                        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="hidden">
+                        <h5>CSS</h5>
+                        <h5 class="progress-percentage" style="margin-left: 85%;">80%</h5>
+                        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%"></div>
+                        </div>
+                    </td>
+                    <td class="hidden">
+                        <h5>Node.js</h5>
+                        <h5 class="progress-percentage" style="margin-left: 75%;">25%</h5>
+                        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 25%"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="hidden">
+                        <h5>JavaScript</h5>
+                        <h5 class="progress-percentage" style="margin-left: 69%;">75%</h5>
+                        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+                        </div>
+                    </td>
+                    <td class="hidden">
+                        <h5>React.js</h5>
+                        <h5 class="progress-percentage" style="margin-left: 75%;">5%</h5>
+                        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 5%"></div>
+                       </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="projects">
+        <h3 class="h3">Projects</h3>
+        <div id="projects-container">
+            <div class="projects-row">
+                <div class="card hidden" style="width: 85%;">
+                    <img src="./sgp_calc.png" class="card-img-top" alt="student grade calculator">
+                    <div class="card-body">
+                        <h5 class="card-title">Semester Grade Point(SGP) Calculator</h5>
+                        <p class="card-text">Developed a simple student semester grade calculator tailored for our institution, using HTML, CSS, and JavaScript. The project automates grade calculations, providing an intuitive interface for students to easily compute their semester performance.</p>
+                        <!-- <a href="#" class="btn btn-dark">Go somewhere</a> -->
+                    </div>
+                </div>
+                <div class="card hidden" style="width: 85%;">
+                    <img src="./rps.png" class="card-img-top" alt="Rock-Paper-Scissor">
+                    <div class="card-body">
+                        <h5 class="card-title">Rock-Paper-Scissor Game</h5>
+                        <p class="card-text">Developed an interactive Rock-Paper-Scissors game using HTML, CSS, and JavaScript, featuring dynamic gameplay and smooth hover effects. The project demonstrates strong front-end skills with a focus on responsive design and user experience.</p>
+                        <!-- <a href="#" class="btn btn-dark">Go somewhere</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="projects-row">
+                <div class="card hidden" style="width: 85%;">
+                    <img src="./signup_login.png" class="card-img-top" alt="signup_login">
+                    <div class="card-body">
+                        <h5 class="card-title">SignUp & Login Page</h5>
+                        <p class="card-text">Implemented a secure signup and login system using PHP, integrating form validation and session management. The project showcases backend development skills, emphasizing data protection and seamless user authentication.</p>
+                        <!-- <a href="#" class="btn btn-dark">Go somewhere</a> -->
+                    </div>
+                </div>
+                <div class="card hidden" style="width: 85%;">
+                    <img src="./weather.png" class="card-img-top" alt="Weather">
+                    <div class="card-body" style="border-top:1px solid hsl(0, 0%, 5%);">
+                        <h5 class="card-title">Weather Application</h5>
+                        <p class="card-text">Built a responsive weather application using HTML, CSS, and JavaScript, with real-time data fetched from a weather API. The project highlights API integration, dynamic UI updates, and a focus on user-friendly design.</p>
+                        <!-- <a href="#" class="btn btn-dark">Go somewhere</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <h3 class="h3">Contact</h3>
+        <div id="contact-container">
+            <div id="contact-container-left" class="hidden">
+                <p class="contact-desc">Feel free to reach out to me for any inquiries or collaborations. I'm excited to connect and discuss potential opportunities. Let's work together!</p>
+                <table>
+                    <tr>
+                        <td rowspan="2" class="table-logo"><img src="./telephone.png" width="40px"/></td>
+                        <th>Call</th>
+                    </tr>
+                    <tr>
+                        <td><p>9963233038</p></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="table-logo"><img src="./mail.png" width="40px"/></td>
+                        <th>Mail</th>
+                    </tr>
+                    <tr>
+                        <td><p>siddharthabojanki@gmail.com</p></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="table-logo"><img src="./location.png" width="40px"/></td>
+                        <th>Address</th>
+                    </tr>
+                    <tr>
+                        <td><p>IIIT Nuzvid,Vijayawada,AP 521202</p></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="contact-container-right" class="hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7639.424709172148!2d80.81180347771!3d16.790980600000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3675e53fa3b4fb%3A0xfd1e193c90e4643!2sRajiv%20Gandhi%20University%20of%20Knowledge%20and%20Technology%20%2C%20Nuzvid!5e0!3m2!1sen!2sin!4v1723906115937!5m2!1sen!2sin" width="100%" height="300em" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <hr style="color: purple;">
+        <p align="center">©Copyright <strong style="color: hsl(300, 100%, 50%);">myPortfolio</strong> All Rights Reserved</p>
+        <div id="footer-socialMedia">
+            <a href="https://www.linkedin.com/in/siddhartha-bojanki-46905b218">
+                <img src="./linkedin.png" alt="linkedin" width="25px" height="25px"/>
+            </a>
+            <a href="https://wa.me/9963233038">
+                <img src="./whatsapp.png" alt="whatsapp" width="25px" height="25px"/>
+            </a>
+            <a href="https://www.instagram.com/siddhu__siddhartha__">
+                <img src="./instagram.png" alt="instagram" width="25px" height="25px"/>
+            </a>
+        </div>
+        <p align="center">Designed by <a href="#about" style="text-decoration: none;color: #7700ff;">@siddhu</a></p>
+    </footer>
+    <script src="./portfolioScript.js"></script>
+</body>
+</html>
