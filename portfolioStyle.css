@@ -225,10 +225,11 @@ li a:hover::after {
     margin: 2% 3%;
     border-radius: 5px;
     letter-spacing: 1.5px;
+    transition: 1s ;
 }
 #projects .projects-row .card:hover{
     box-shadow: 1px 1px 30px hsl(251, 55%, 25%);
-    transform: scale(1.02);
+    transform: translateY(-15px);
 }
 #projects .projects-row .card .card-title{
     color: #7777ff;
