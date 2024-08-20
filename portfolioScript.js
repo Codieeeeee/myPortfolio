@@ -1,6 +1,8 @@
 // for navbar
 let lastScrollTop = 0;
 const navbar = document.getElementById("navbar");
+const navbarCollapse = document.getElementById('navbarNav');
+const navbarToggler = document.querySelector('.navbar-toggler');
 
 window.addEventListener("scroll", function() {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -8,12 +10,15 @@ window.addEventListener("scroll", function() {
     if (scrollTop > lastScrollTop) {
         // Scrolling down
         navbar.classList.add("hidden1");
-    } else {
+        if (navbarCollapse.classList.contains('show')) {
+            navbarToggler.click(); // Programmatically collapse the navbar
+        }
+    }
+    else {
         // Scrolling up
         navbar.classList.remove("hidden1");
     }
-    
-    lastScrollTop = scrollTop;
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 // for photo
 $(document).ready(function(){

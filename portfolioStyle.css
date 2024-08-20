@@ -12,7 +12,8 @@ body{
     z-index: 1000;
 }
 .hidden1{
-    top: -100px;
+    top: -100%;
+    transition: 0.5s ease-in-out;
 }
 .navbar-brand img{
     border-radius: 50%;
