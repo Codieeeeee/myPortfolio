@@ -20,8 +20,8 @@ body{
 .nav-item{
     margin: 0px 10px;
     position: relative;   
-    font-size: large;
-    font-family:'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-family:monospace;
 }
 li a::after {
     content: '';
@@ -157,7 +157,6 @@ li a:hover::after {
     height: fit-content;
     text-align: justify;
     letter-spacing: 1px;
-    font-family: 'Courier New', Courier, monospace;
     margin-left: 2%;
 }
 .about-container-right-table{
@@ -257,7 +256,6 @@ li a:hover::after {
 .contact-desc,#contact-container-left table{
     letter-spacing: 1.5px;
     font-size: medium;
-    font-family:'Courier New', Courier, monospace;
 }
 table .table-logo{
     padding: 0px 10px 10px 0px;
@@ -356,6 +354,9 @@ footer{
         margin: 20px 0px;
         border-radius: 20px;
         background-position-y: 1px;
+    }
+    .nav-item{
+        font-size: 1.15rem;
     }
 }
 @media (min-width: 700px) and (max-width:900px) {
