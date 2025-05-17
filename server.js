@@ -43,6 +43,11 @@ app.post('/send', (req, res) => {
     });
 });
 
+// Welcome route
+app.get('/', (req, res) => {
+    res.send('Welcome to the Portfolio Backend!');
+});
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running`);
