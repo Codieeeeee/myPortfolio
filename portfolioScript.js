@@ -37,3 +37,58 @@ const observer = new IntersectionObserver((entries)=>{
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((e1)=>observer.observe(e1));
+
+document.querySelector('form').addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent the default form submission
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    // Convert form data to JSON
+    const data = Object.fromEntries(formData.entries());
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    const toastElement = document.getElementById('form-toast');
+    const toastBody = toastElement.querySelector('.toast-body');
+    const toast = new bootstrap.Toast(toastElement); 
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+
+    try {
+        const response = await fetch('http://localhost:3000/send', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            // Display success toast
+            toastElement.classList.remove('text-bg-danger');
+            toastElement.classList.add('text-bg-success');
+            toastBody.textContent = result.message;
+            toast.show();
+            form.reset(); // Clear the form
+        } else {
+            // Display error toast
+            toastElement.classList.remove('text-bg-success');
+            toastElement.classList.add('text-bg-danger');
+            toastBody.textContent = result.message;
+            toast.show();
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        // Display error toast for unexpected errors
+        toastElement.classList.remove('text-bg-success');
+        toastElement.classList.add('text-bg-danger');
+        toastBody.textContent = 'An unexpected error occurred. Please try again later.';
+        toast.show();
+    } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send Message';
+    }
+});
