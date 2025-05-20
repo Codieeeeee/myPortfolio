@@ -48,13 +48,13 @@
             <div id="home-right-photo"></div>
             <div id="home-right-socialMedia">
                 <a href="https://www.linkedin.com/in/siddhartha-bojanki-46905b218">
-                    <img src="./linkedin.png" alt="linkedin" width="25px" height="25px"/>
+                    <img src="./images/linkedin.png" alt="linkedin" width="25px" height="25px"/>
                 </a>
                 <a href="https://wa.me/9963233038">
-                    <img src="./whatsapp.png" alt="whatsapp" width="25px" height="25px"/>
+                    <img src="./images/whatsapp.png" alt="whatsapp" width="25px" height="25px"/>
                 </a>
                 <a href="https://www.instagram.com/siddhu__siddhartha__">
-                    <img src="./instagram.png" alt="instagram" width="25px" height="25px"/>
+                    <img src="./images/instagram.png" alt="instagram" width="25px" height="25px"/>
                 </a>
             </div>
         </div>
@@ -168,47 +168,134 @@
             </div>
         </div>
     </section>
+
     <section id="projects">
         <h3 class="h3">Projects</h3>
         <div id="projects-container">
-            <div class="projects-row">
-                <div class="card hidden" style="width: 85%;">
-                    <img src="./sgp_calc.png" class="card-img-top" alt="student grade calculator">
-                    <div class="card-body">
-                        <h5 class="card-title">Semester Grade Point(SGP) Calculator</h5>
-                        <p class="card-text">Developed a simple student semester grade calculator tailored for our institution, using HTML, CSS, and JavaScript. The project automates grade calculations, providing an intuitive interface for students to easily compute their semester performance.</p>
-                        <a href="https://github.com/Codieeeeee/webProjects/blob/master/SGP_Calculator" class="btn btn-dark">Git hub repo</a>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="./images/grievance.png" alt="Rock-Paper-Scissor">
+                    <h4 class="card-title">Grievance Redressal System</h4>
+                    <p>An interactive Rock-Paper-Scissors game using HTML, CSS, and JavaScript, featuring dynamic gameplay and smooth hover effects. The project demonstrates strong front-end skills with a focus on responsive design and user experience.</p>
+                    <div class="buttons">
+                    <a href="https://github.com/Codieeeeee/webProjects/tree/master/Rock_Paper_Scissor" target="_blank" class="btn" >GitHub</a>
+                    <!-- <a href="https://yourdemo.com/login-system" target="_blank" class="btn">Live Demo</a> -->
+                    <button class="btn" onclick="openModal('modal-grievance')">Know More</button>
                     </div>
                 </div>
-                <div class="card hidden" style="width: 85%;">
-                    <img src="./rps.png" class="card-img-top" alt="Rock-Paper-Scissor">
-                    <div class="card-body">
-                        <h5 class="card-title">Rock-Paper-Scissor Game</h5>
-                        <p class="card-text">Developed an interactive Rock-Paper-Scissors game using HTML, CSS, and JavaScript, featuring dynamic gameplay and smooth hover effects. The project demonstrates strong front-end skills with a focus on responsive design and user experience.</p>
-                        <a href="https://github.com/Codieeeeee/webProjects/tree/master/Rock_Paper_Scissor" class="btn btn-dark">Git hub repo</a>
-                    </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                <img src="./images/sms_spam.png" alt="Spam Classifier">
+                <h4 class="card-title">SMS Spam Classifier</h4>
+                <p class="card-text">An SMS/Email Spam Classifier using machine learning with real-time predictions via a Streamlit web app. Utilized TF-IDF vectorization and a Naive Bayes model, with text preprocessing and model deployment handled using Pandas and Pickle.</p>
+                <div class="buttons">
+                    <a href="https://github.com/Codieeeeee/sms-spam-classifier" target="_blank" class="btn">GitHub</a>
+                    <!-- <a href="https://yourdemo.com/spam-classifier" target="_blank" class="btn">Live Demo</a> -->
+                    <button class="btn" onclick="openModal('modal-spam')">Know More</button>
                 </div>
-            </div>
-            <div class="projects-row">
-                <div class="card hidden" style="width: 85%;">
-                    <img src="./signup_login.png" class="card-img-top" alt="signup_login">
-                    <div class="card-body">
-                        <h5 class="card-title">SignUp & Login Page</h5>
-                        <p class="card-text">Implemented a secure signup and login system using PHP, integrating form validation and session management. The project showcases backend development skills, emphasizing data protection and seamless user authentication.</p>
-                        <a href="https://github.com/Codieeeeee/webProjects/tree/master/Signup_and_Login" class="btn btn-dark">Git hub repo</a>
-                    </div>
                 </div>
-                <div class="card hidden" style="width: 85%;">
-                    <img src="./weather.png" class="card-img-top" alt="Weather">
-                    <div class="card-body" style="border-top:1px solid hsl(0, 0%, 5%);">
-                        <h5 class="card-title">Weather Info Application</h5>
-                        <p class="card-text">Built a responsive weather application using HTML, CSS, and JavaScript, with real-time data fetched from a weather API. The project highlights API integration, dynamic UI updates, and a focus on user-friendly design.</p>
-                        <a href="https://github.com/Codieeeeee/webProjects/tree/master/Weather_Info" class="btn btn-dark">Git hub repo</a>
-                    </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                <img src="./images/weather.png" alt="Weather App">
+                <h4 class="card-title">Weather Info App</h4>
+                <p>Developed a simple responsive weather info application using HTML, CSS, and JavaScript, with real-time data fetched from a OpenWeatherMap API. The project highlights API integration, dynamic UI updates, and a focus on user-friendly design.</p>
+                <div class="buttons">
+                    <a href="https://github.com/Codieeeeee/webProjects/tree/master/Weather_Info" target="_blank" class="btn">GitHub</a>
+                    <!-- <a href="https://yourdemo.com/weather-app" target="_blank" class="btn">Live Demo</a> -->
+                    <button class="btn" onclick="openModal('modal-weather')">Know More</button>
+                </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modals -->
+    <div id="modal-grievance" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-grievance')">&times;</span>
+            <h2>Grievance Redressal System</h2>
+            <p>
+            A web-based application that streamlines complaint registration and resolution using <strong>Natural Language Processing (NLP)</strong>, <strong>image relevance detection</strong>, and <strong>location tracking</strong>. It provides dedicated interfaces for users and administrators to manage grievances with automated classification, media verification, and real-time status updates.
+            </p>
+            <h3>🌐 Features</h3>
+            <ul>
+            <li>Automated complaint classification using NLP</li>
+            <li>User portal with a chatbot to submit complaints with images and track status</li>
+            <li>Image relevance checking to verify submitted complaint images</li>
+            <li>Location detection using reverse geocoding for accurate complaint mapping</li>
+            <li>Admin dashboard to view, filter, and update complaint statuses</li>
+            <li>Real-time updates with dynamic visual feedback</li>
+            </ul>
+            <h3>🛠️ Tech Stack</h3>
+            <ul>
+            <li><strong>Python</strong> – Backend logic, NLP model, and image validation</li>
+            <li><strong>HTML, CSS, JavaScript</strong> – User interface for chatbot and complaint submission, Admin portal and interactive dashboard</li>
+            <li><strong>Flask / FastAPI</strong> – REST API development</li>
+            <li><strong>OpenCV / TensorFlow</strong> – Image relevance detection</li>
+            <li><strong>Geopy / Google Maps API</strong> – Reverse geocoding for location extraction</li>
+            </ul>
+            <p>
+            This project highlights expertise in NLP, computer vision, geolocation services, and full-stack web development to create an intelligent and efficient grievance management system.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal-spam" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-spam')">&times;</span>
+            <h2>SMS/Email Spam Classifier</h2>
+            <p>
+            This project is a Machine Learning-based web application that can detect whether a given SMS or email message is <strong>spam</strong> or <strong>not spam (ham)</strong>.
+            </p>
+            <h3>🌐 Features</h3>
+            <ul>
+            <li>Real-time prediction of messages through a user-friendly web interface.</li>
+            <li>Instant feedback on whether the message is likely spam or not.</li>
+            <li>Built with <strong>Streamlit</strong> for quick and interactive deployment.</li>
+            </ul>
+            <h3>🛠️ Tech Stack</h3>
+            <ul>
+            <li><strong>Python</strong> – Core logic and machine learning pipeline</li>
+            <li><strong>Scikit-learn</strong> – Model building and evaluation</li>
+            <li><strong>Pandas</strong> – Data handling</li>
+            <li><strong>Streamlit</strong> – Web app interface</li>
+            <li><strong>Pickle</strong> – Model serialization</li>
+            </ul>
+            <p>
+            This project showcases the practical use of machine learning for real-world applications and is ideal for understanding how NLP (Natural Language Processing) can help filter unwanted messages effectively.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal-weather" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-weather')">&times;</span>
+            <h2>Weather Info Application</h2>
+            <p>
+            A responsive web application that displays real-time weather updates for any city using the <strong>OpenWeatherMap API</strong>. The app offers an intuitive interface for users to check temperature, humidity, wind speed, and general weather conditions.
+            </p>
+            <h3>🌐 Features</h3>
+            <ul>
+            <li>Live weather data fetched from OpenWeatherMap API</li>
+            <li>Search functionality for cities worldwide</li>
+            <li>Dynamic UI updates based on the weather status</li>
+            <li>Mobile-friendly and responsive design</li>
+            </ul>
+            <h3>🛠️ Tech Stack</h3>
+            <ul>
+            <li><strong>HTML</strong> – Markup structure</li>
+            <li><strong>CSS</strong> – Styling and responsiveness</li>
+            <li><strong>JavaScript</strong> – API integration and DOM manipulation</li>
+            <li><strong>OpenWeatherMap API</strong> – Real-time weather data</li>
+            </ul>
+            <p>
+            This project highlights skills in API integration, asynchronous JavaScript, and building user-friendly interfaces that react to real-time data.
+            </p>
+        </div>
+    </div>
+
+
     <section id="contact">
         <h3 class="h3">Contact</h3>
         <div id="contact-container">
@@ -233,7 +320,7 @@
             <div id="contact-container-right" class="hidden">
                 <table>
                     <tr>
-                        <td rowspan="2" class="table-logo"><img src="./location.png" width="40px"/></td>
+                        <td rowspan="2" class="table-logo"><img src="./images/location.png" width="40px"/></td>
                         <th>Address</th>
                     </tr>
                     <tr>
@@ -249,13 +336,13 @@
         <p align="center">©Copyright <strong style="color: hsl(300, 100%, 50%);">myPortfolio</strong> All Rights Reserved</p>
         <div id="footer-socialMedia">
             <a href="https://www.linkedin.com/in/siddhartha-bojanki-46905b218">
-                <img src="./linkedin.png" alt="linkedin" width="25px" height="25px"/>
+                <img src="./images/linkedin.png" alt="linkedin" width="25px" height="25px"/>
             </a>
             <a href="https://wa.me/9963233038">
-                <img src="./whatsapp.png" alt="whatsapp" width="25px" height="25px"/>
+                <img src="./images/whatsapp.png" alt="whatsapp" width="25px" height="25px"/>
             </a>
             <a href="https://www.instagram.com/siddhu__siddhartha__">
-                <img src="./instagram.png" alt="instagram" width="25px" height="25px"/>
+                <img src="./images/instagram.png" alt="instagram" width="25px" height="25px"/>
             </a>
         </div>
         <p align="center">Designed by <a href="#about" style="text-decoration: none;color: #7700ff;">@siddhu</a></p>

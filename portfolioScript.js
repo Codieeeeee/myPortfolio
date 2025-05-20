@@ -92,3 +92,22 @@ document.querySelector('form').addEventListener('submit', async (event) => {
         submitButton.textContent = 'Send Message';
     }
 });
+
+function openModal(id) {
+    document.getElementById(id).style.display = "block";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+
+  window.onclick = function (e) {
+    document.querySelectorAll('.modal').forEach(modal => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
+  }

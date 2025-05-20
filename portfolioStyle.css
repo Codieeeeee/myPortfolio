@@ -212,23 +212,26 @@ li a:hover::after {
     box-shadow: 0px 0px 6px #7700cc;
     margin: 1em 0%;
 }
-.projects-row{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    padding: 30px;
 }
-#projects .projects-row .card{
+  
+.project-card {
     box-shadow: 0px 0px 10px hsl(251, 55%, 25%);
     color: white;
     background-color: black;
-    margin: 2em 2em;
+    padding: 20px;
     border-radius: 5px;
-    letter-spacing: 1.5px;
     transition: .7s ;
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
 }
+  
 @keyframes appear{
     from{
         opacity: 0;
@@ -237,15 +240,105 @@ li a:hover::after {
     to{
         opacity: 1;
         scale: 1;
-    }
+    }  
 }
-#projects .projects-row .card:hover{
-    box-shadow: 1px 1px 30px hsl(251, 55%, 25%);
-    transform: translateY(-15px);
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
 }
-#projects .projects-row .card .card-title{
+
+.card-title{
     color: #7777ff;
 }
+
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+  
+.project-card p {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.buttons .btn {
+    display: inline-block;
+    margin: 6px 3.5px 0;
+    padding: 8px 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.88rem;
+    box-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
+}
+  
+.buttons .btn:hover {
+    background-color: #cc00cc;
+    transform: scale(1.05);
+}
+
+ /* Modal Styles */
+ .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+.modal-content {
+    background-color: black;
+    color: #eee;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    box-shadow: 0px 0px 5px hsl(251, 55%, 25%);
+}
+  
+.modal-content h2 {
+    color: #ff00ff;
+}
+  
+.modal-content ul {
+    text-align: left;
+    padding-left: 20px;
+}
+  
+.modal-content li {
+    margin-bottom: 8px;
+}
+  
+.close {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff00ff;
+    cursor: pointer;
+}
+  
+.close:hover {
+    color: white;
+}
+  
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 #contact{
     width: 90%;
     margin: 10% 6%;
@@ -444,6 +537,23 @@ form button:active {
     .nav-item{
         font-size: 1.15rem;
     }
+
+    .project-card {
+        width: 90%;
+    }
+
+    .buttons .btn {
+        display: inline-block;
+        margin: 6px 3.5px 5;
+        padding: 8px 10px;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.88rem;
+        box-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+        transition: background-color 0.3s, transform 0.3s;
+    }
 }
 @media (min-width: 700px) and (max-width:900px) {
     #about-container .about-container-left .description{
@@ -455,3 +565,5 @@ form button:active {
         font-size: 1.6rem;
     } 
 }
+  
+  
