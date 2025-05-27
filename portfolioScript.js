@@ -111,3 +111,32 @@ function openModal(id) {
       }
     });
   }
+
+// Dynamic text for the home section with animations
+const dynamicTextElement = document.getElementById('dynamic-text');
+const textArray = [
+    'Deep Learning Enthusiast',
+    'Machine Learning Engineer',
+    'Competitive Programmer',
+    'Full-Stack Web Developer',
+];
+let textIndex = 0;
+
+function updateDynamicText() {
+    // Fade out the text
+    dynamicTextElement.classList.add('fade-out');
+    
+    setTimeout(() => {
+        // Update the text after fade-out
+        dynamicTextElement.textContent = textArray[textIndex];
+        textIndex = (textIndex + 1) % textArray.length; // Cycle through the array
+
+        // Fade in the text
+        dynamicTextElement.classList.remove('fade-out');
+        // dynamicTextElement.classList.add('fade-in');
+
+    }, 500); // Match the fade-out duration
+}
+
+// Update the text every 3 seconds
+setInterval(updateDynamicText, 3000);
